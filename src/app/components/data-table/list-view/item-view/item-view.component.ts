@@ -16,9 +16,11 @@ export class ItemViewComponent implements OnInit {
   }
   onDelete(p:Product){
     let v = confirm("delete this item?")
-    if(v)
+    if(v){
       this.service.deleteProduct(p).subscribe()
       alert(" the product item deleted successfully")
+    }
+      
   }
   onEditProduct(p: Product){
     this.router.navigateByUrl('/editproduct/'+p.id)
