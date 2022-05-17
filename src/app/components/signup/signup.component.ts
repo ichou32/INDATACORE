@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { AuthenticationService } from '../services/authentication.service';
-import { UserService } from '../services/user.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -20,9 +20,7 @@ export class SignupComponent implements OnInit {
     private router: Router,
     private authenticationService: AuthenticationService,
     private userService: UserService,
-    // private alertService: AlertService
   ) {
-    // redirect to home if already logged in
     if (this.authenticationService.currentUserValue) { 
         this.router.navigate(['/']);
     }
@@ -53,11 +51,9 @@ export class SignupComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          // this.alertService.success('Registration successful', true);
           this.router.navigate(['/login']);
         },
         error => {
-          // this.alertService.error(error);
           this.loading = false;
         });
   }

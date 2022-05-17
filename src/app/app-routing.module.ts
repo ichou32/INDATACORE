@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { DataTableComponent } from './data-table/data-table.component';
-import { EditItemComponent } from './edit-item/edit-item.component';
-import { FileUploadComponent } from './file-upload/file-upload.component';
-import { GraphesComponent } from './graphes/graphes.component';
+import { DataTableComponent } from './components/data-table/data-table.component';
+import { EditItemComponent } from './components/edit-item/edit-item.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { GraphesComponent } from './components/graphes/graphes.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { AuthGuard } from './guards/auth.guard';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },

@@ -6,19 +6,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+import { DataTableComponent } from './components/data-table/data-table.component';
+import { ItemViewComponent } from './components/data-table/list-view/item-view/item-view.component';
+import { ListViewComponent } from './components/data-table/list-view/list-view.component';
+import { EditItemComponent } from './components/edit-item/edit-item.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { GraphesComponent } from './components/graphes/graphes.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { ErrorInterceptor } from './FakeBackend/error.interceptor';
-import { JwtInterceptor } from './FakeBackend/jwt.interceptor';
 import { fakeBackendProvider } from './FakeBackend/fake_backend';
-import { SideBarComponent } from './side-bar/side-bar.component';
-import { DataTableComponent } from './data-table/data-table.component';
-import { ListViewComponent } from './data-table/list-view/list-view.component';
-import { ItemViewComponent } from './data-table/list-view/item-view/item-view.component';
-import { EditItemComponent } from './edit-item/edit-item.component';
-import { FileUploadComponent } from './file-upload/file-upload.component';
-import { HomeComponent } from './home/home.component';
-import { GraphesComponent } from './graphes/graphes.component';
+import { JwtInterceptor } from './FakeBackend/jwt.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { GraphesComponent } from './graphes/graphes.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
