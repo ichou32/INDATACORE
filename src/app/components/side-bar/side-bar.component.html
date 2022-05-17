@@ -1,0 +1,12 @@
+<div class="sidebar-slider">
+    <div class="sidebar-content">
+        <div class="navs" style="width: 100%;">
+            <button [routerLink]="['/datatable']" class="list-group-item list-group-item-action"><i
+                class="fa-solid fa-calendar mx-2 px-2"></i>datatable</button>
+            <button [routerLink]="['/uploadfile']" class="list-group-item list-group-item-action"><i class="fa-solid fa-users mx-2 px-2"></i>upload a file</button>   
+            <button [routerLink]="['/graphes']" class="list-group-item list-group-item-action"><i class="fa-solid fa-folder mx-2 px-2"></i>graphes </button>
+        </div>
+        <button (click)="logout()" class="list-group-item list-group-item-action"><i
+                class="fa-solid fa-arrow-right-from-bracket mx-2 px-2"></i>Log out</button>
+    </div>
+</div>

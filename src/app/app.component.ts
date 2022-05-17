@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { user } from './models/user';
 import { AuthenticationService } from './services/authentication.service';
@@ -8,15 +8,21 @@ import { AuthenticationService } from './services/authentication.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'INDATACORETest';
   currentUser!: user;
-
+  logged: boolean= false
   constructor(
       private router: Router,
       private authenticationService: AuthenticationService
   ) {
-      // this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    const currentUser = this.authenticationService.currentUserValue;
+
+  }
+  ngOnInit(): void {
+    if (this.currentUser) {
+        this.logged = true;
+    }  
   }
 
 //   logout() {

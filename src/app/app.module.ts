@@ -8,27 +8,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { HomeComponent } from './home/home.component';
 import { ErrorInterceptor } from './FakeBackend/error.interceptor';
 import { JwtInterceptor } from './FakeBackend/jwt.interceptor';
 import { fakeBackendProvider } from './FakeBackend/fake_backend';
-import { SideBarComponent } from './home/side-bar/side-bar.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { ListViewComponent } from './data-table/list-view/list-view.component';
 import { ItemViewComponent } from './data-table/list-view/item-view/item-view.component';
 import { EditItemComponent } from './edit-item/edit-item.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+import { HomeComponent } from './home/home.component';
+import { GraphesComponent } from './graphes/graphes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    HomeComponent,
     SideBarComponent,
     DataTableComponent,
     ListViewComponent,
     ItemViewComponent,
-    EditItemComponent
+    EditItemComponent,
+    FileUploadComponent,
+    HomeComponent,
+    GraphesComponent
   ],
   imports: [
     BrowserModule,
