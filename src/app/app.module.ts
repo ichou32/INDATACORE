@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -12,6 +13,10 @@ import { ErrorInterceptor } from './FakeBackend/error.interceptor';
 import { JwtInterceptor } from './FakeBackend/jwt.interceptor';
 import { fakeBackendProvider } from './FakeBackend/fake_backend';
 import { SideBarComponent } from './home/side-bar/side-bar.component';
+import { DataTableComponent } from './data-table/data-table.component';
+import { ListViewComponent } from './data-table/list-view/list-view.component';
+import { ItemViewComponent } from './data-table/list-view/item-view/item-view.component';
+import { EditItemComponent } from './edit-item/edit-item.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +24,19 @@ import { SideBarComponent } from './home/side-bar/side-bar.component';
     LoginComponent,
     SignupComponent,
     HomeComponent,
-    SideBarComponent
+    SideBarComponent,
+    DataTableComponent,
+    ListViewComponent,
+    ItemViewComponent,
+    EditItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

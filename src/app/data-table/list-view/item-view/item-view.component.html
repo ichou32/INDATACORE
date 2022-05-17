@@ -1,0 +1,21 @@
+
+<tr *ngIf="productItem">
+    <td>{{productItem.id}}</td>
+    <td>{{productItem.name}}</td>
+    <td>{{productItem.price}}</td>
+    <td>{{productItem.quantity}}</td>
+    <td>{{productItem.selected}}</td>
+    <td>{{productItem.available}}</td>
+    <td>
+    </td>
+    <td>
+        <button (click)="onEditProduct(productItem)" class="btn btn-success">
+            <span class="fa fa-edit">Modifier</span>
+        </button>
+    </td>
+    <td>
+        <button (click)="onDelete(productItem)" class="btn btn-danger">
+            <span class="fa fa-trash-o">Supprimer </span>
+        </button>
+    </td>
+</tr>   

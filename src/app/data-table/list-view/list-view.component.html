@@ -1,0 +1,16 @@
+<ng-container *ngIf="products">
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Selected</th>
+            <th>Available</th>
+        </tr>
+        <app-item-view [productItem]="p"
+            *ngFor="let p of products" style="display: contents;">
+
+        </app-item-view>
+    </table>
+</ng-container>
